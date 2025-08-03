@@ -8,7 +8,7 @@ export const userCreation = inngest.createFunction(
   async ({ event }) => {
     await connectToDatabase();
     const {
-      clerkId,
+      id,
       first_name,
       last_name,
       username,
@@ -16,7 +16,7 @@ export const userCreation = inngest.createFunction(
       image_url,
     } = event.data;
     const newUser = await User.create({
-      clerkId,
+      clerkId:id,
       firstName: first_name,
       lastName: last_name,
       username,
