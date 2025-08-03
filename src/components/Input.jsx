@@ -3,6 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import { useRef, useState } from "react";
+import { Router } from "next/router";
 
 const Input = () => {
   const { user, isSignedIn, isLoaded } = useUser();
