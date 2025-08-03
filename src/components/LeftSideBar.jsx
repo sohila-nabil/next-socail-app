@@ -7,6 +7,7 @@ import {
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";
+import MenuProfile from "./MenuProfile";
 const LeftSideBar = () => {
   return (
     <div className="flex flex-col p-3 justify-between h-screen items-center">
@@ -30,6 +31,10 @@ const LeftSideBar = () => {
           </SignedOut>
         </button>
       </div>
+
+      <SignedIn>
+        <MenuProfile/>
+      </SignedIn>
     </div>
   );
 };
